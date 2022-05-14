@@ -49,7 +49,7 @@ main{
   }
 
 
-.clothImage img{
+.loveMe img{
     max-width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -68,4 +68,29 @@ main{
     background-color: #4554da;
     margin-top: -0.6em;
     text-decoration: none;
+}
+
+
+
+.fa-heart {
+  color: red;
+}
+
+.loveMe {
+  margin: auto;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.loveMe .fa-heart {
+  position: absolute;
+  animation: grow 0.6s linear;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes grow {
+  to {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
 }
