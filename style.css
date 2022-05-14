@@ -399,7 +399,22 @@ margin-top: 20em;
   font-weight: 800;
   border-radius: 50px;
   text-decoration: none;
+
 }
+
+
+.repBtn{
+  color:white;
+  font-style: normal;
+  text-decoration: none;
+  background-color: #00000000;
+}
+
+.repBtn:hover{
+  transition: all 0.2s ease-in-out;
+  text-shadow: 0px 0px 10px rgb(255 255 255);
+}
+
 
 .btn:hover {
   color: #ffffff;
@@ -481,66 +496,6 @@ margin-top: 20em;
   overflow: hidden;
 }
 
-  .bxl-linkedin {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 100px;
-    background: #0967af;
-    color: white;
-  }
-  .bxl-github {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 100px;
-    background: #000000;
-    color: white;
-  }
-  .bxs-envelope {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 100px;
-    background: #4554da;
-    color: white;
-  }
-
-.bxl-linkedin:hover {
-    opacity: 0.7;
-    transition: all ease-in-out 300ms;
-    box-shadow:2px 2px 20px rgba(34, 126, 231, 0.76);
-}
-.bxl-github:hover {
-  opacity: 0.7;
-  transition: all ease-in-out 300ms;
-  box-shadow:2px 2px 20px rgba(119, 119, 119, 0.76);
-}
-.bxs-envelope:hover {
-  opacity: 0.7;
-  transition: all ease-in-out 300ms;
-  box-shadow:2px 2px 20px rgba(145, 92, 182, 0.76);
-}
-
-
-.wave-container {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.wave-container > svg {
-  display: block;
-}
 
 footer {
   width: 100%; /* self explanatory */ /*The element is positioned relative to its first positioned (not static) ancestor element*/
@@ -632,18 +587,6 @@ footer {
   display: none;
 }
 
-
-.repBtn{
-  color:white;
-  font-style: normal;
-  text-decoration: none;
-  background-color: #00000000;
-}
-
-.repBtn:hover{
-  transition: all 0.2s ease-in-out;
-  text-shadow: 0px 0px 10px rgb(255 255 255);
-}
 
 
 /* Add styles to the form container */
@@ -803,55 +746,6 @@ input:-webkit-autofill, input:focus:-webkit-autofill {
     font-family: 'Alata', sans-serif;
 }
 
-
-@media (prefers-color-scheme: dark) {
-	body {background:#121212;}
-        #projects { color: #ffffff; }
-	#contact { color: #ffffff; }
-	.card {color: #ffffff;
-	background: #1b262c; }
-	.cardEx { background: #1b262c;
-            color:white }
-	.tab-container { background: #000000; }
-  .tab { 
-    background-color: #00000094;
-    color:white;
-  }
-  .tab.active.purple{
-    background: #ad5aec4d;
-  }
-	.navbar a{ color: #ffffff;}
-	#contactText {color: #ffffff;}
-	.form-container {
-	background-color: #1b262c;
-	color: white;
-	background: #1b262c; }
-	label { background-color: #1b262c;
-        color: white; }
-	input { background-color: #1b262c;
-	border: 1px solid white;
- 	border-radius: 5px;
-	color:white; }
-	.form-container input:focus + label { color: white; }
-	textarea { background-color: #1b262c;
-	border: 1px solid white;
- 	border-radius: 5px; }
-	.form-container textarea:focus + label { color: white; }
-	.box { background-color: #00000094; }
-	input:-webkit-autofill, input:focus:-webkit-autofill {
-        -webkit-box-shadow: 0px 0px 0 100px #1b262c inset; 
-	-webkit-text-fill-color:white;}
-	.form-container textarea{color:white;}
-        .form-container input[type=text], .form-container input[type=email], .form-container input[type=password] { color:white; }
-
-  #newTitle { color:white; }
-  #skillType { color: white;}
-  #skillChips {
-    background-color: #1b262c;
-    color: white;;
-        }
-        
-}
 
 @-webkit-keyframes autofill {
     0%,100% {
