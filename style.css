@@ -140,12 +140,14 @@ nav.active ul{
 nav ul li{
     transform: rotateY(0deg);
     opacity: 0;
-    transition: transform 0.6s linear, opacity 0.6s linear;
+    visibility: hidden;
+    transition: transform 0.6s linear, opacity 0.6s linear, visibility 0.6s linear;
 }
 
 nav.active ul li {
     opacity: 1;
     transform: rotateY(360deg);
+    visibility: visible;
 }
 
 nav ul a {
@@ -172,7 +174,7 @@ nav ul a {
 
 .icon .line {
     background-color: white;
-    height: 2px;
+    height: 3px;
     top: 10px;
     left: 10px;
     transition: transform 0.6s linear;
@@ -202,7 +204,7 @@ nav.active .icon .line2 {
 
 .about img{
 position: relative;
-margin-top: 10em;
+margin-top: 20em;
 
 }
 
@@ -554,59 +556,6 @@ footer {
   margin-top: 5em;
 }
 
-
-/*old navbar
-/* Place the navbar at the bottom of the page, and make it stick
-.navbar {
-  position: fixed;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 800;
-      bottom: 0;
-      width: 100%;
-      height: 55px;
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-      background-color: #ffffff;
-      display: flex;
-      overflow-x: auto;
-  }
-  
-  /* Style the links inside the navigation bar
-  .navbar a {
-    z-index: 9999;
-    float: left;
-    display: block;
-    color: #222;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 1.1em;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Change the color of links on hover
-  .navbar a:hover {
-    background-color: #4554da;
-    color: #ffffff;
-  }
-  
-  /* Add a color to the active/current link
-  .navbar a.active {
-   display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-      min-width: 50px;
-      overflow: hidden;
-      white-space: nowrap;
-      font-size: 1.3em;
-      color: #4554da;
-      text-decoration: none;
-      -webkit-tap-highlight-color: transparent;
-      transition: background-color 0.5s ease-in-out;
-      margin:0;
-  }
-  .navbar {display: none}
-*/
 
 .tab-container{
   background: #fff;
