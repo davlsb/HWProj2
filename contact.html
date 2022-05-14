@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Description" content="Dee's portfolio website.">
+        <meta name="theme-color" content="#8E00FF"/>
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <title> Nirvopoly Development </title>
+    </head>
+
+    <header id="myHeader">
+     <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+      </div>
+        <a name="topB"></a>
+        <div class="top"> 
+            <h1 class="logo" id="nameID">
+              Nirvopoly Development
+              </h1>
+   <!-- <div class="nav" id="navigation">
+          <ul>
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="#projectsMark">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    -->
+    </header>
+  
+    
+<main class="containerContact">
+   <section class="contactMe">
+    <div id="contact"> <h2 class="contactTitle">Contact Us</h2> </div>
+
+     <section class="form-container" data-aos="zoom-in-up">
+        <form name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSdBGRXL0tL03-7G_aI6a2nP9XluU3cVadxqiudVgquJgG12rg/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
+                  
+            <div class="material-textfield">
+              <input placeholder=" " type="text" name="entry.1803483636" id="entry.1803483636" required>
+              <label for="name">Full Name</label>
+            </div>
+                  
+            <div class="material-textfield">
+              <input placeholder=" " type="email" name="entry.567895808" id="entry.567895808" required>
+              <label for="email">Email</label>
+             </div>
+        
+            <div class="material-textfield-message">
+              <textarea name="entry.1960167367" id="entry.1960167367" cols="40" rows="5" placeholder="Message"></textarea>
+            </div>
+        
+            <button id="submitBtn" type="submit" class="btn" onclick="sendForm()">Send</button>
+
+          </form>
+            
+</main>
+        
+    
+<div class="tab-body">
+  <div class="tab-container">
+    <a class="waitBeforeNavigateQuick" href="#aboutme">
+      <div class="tab purple active">
+        <i class='bx bx-info-circle'></i>
+      <p>About</p>
+      </div>
+    <a class="waitBeforeNavigateQuick" href="#projectsMark">
+      <div class="tab pink">
+        <i class='bx bx-briefcase'></i>
+        <p>Projects</p>
+      </div>
+    </a>
+    <a class="waitBeforeNavigateQuick" href="#contact">
+      <div class="tab yellow">
+        <i class='bx bx-mail-send'></i>
+        <p>Contact</p>
+      </div>
+    </a>
+    <a class="waitBeforeNavigate" href="">
+      <div class="tab green">
+        <i class='bx bx-file'></i>
+        <p>Resume</p>
+      </div>
+    </a>
+  </div>
+</div>
+
+	
+   <script src="lazysizes.min.js" async=""></script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+   <script src="script.js" defer></script>
+   <script type="text/javascript">var submitted=false;</script>
+	
+
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+
+    tabs.forEach(clickedTab => {
+      clickedTab.addEventListener('click', ()=>{
+        tabs.forEach(tab => {
+        tab.classList.remove('active');
+      });
+
+      clickedTab.classList.add('active');
+      const clickedTabBGColor = getComputedStyle(clickedTab).getPropertyValue('color');
+      console.log(clickedTabBGColor);
+      document.getElementById('btnGit1').style.background = clickedTabBGColor;
+      document.getElementById('btnGit2').style.background = clickedTabBGColor;
+      document.getElementById('btnGit3').style.background = clickedTabBGColor;
+      document.getElementById('submitBtn').style.background = clickedTabBGColor;
+     
+      if(clickedTabBGColor == "rgb(147, 112, 219)"){ //Purple
+      document.getElementsByClassName('about')[0].style.backgroundImage = 'linear-gradient(to bottom,#8c00ff, #8c00ff, #8c00ffd7, #8c00ffd7, #7f01e6bd, #8c00ffb7, #8c00ff00)';
+      }
+      else if(clickedTabBGColor == "rgb(178, 75, 243)"){ //Pink
+      document.getElementsByClassName('about')[0].style.backgroundImage = 'linear-gradient(to bottom, rgba(178, 75, 243, 0.95), rgba(178, 75, 243, 0.85), rgba(178, 75, 243, 0.75), rgba(178, 75, 243, 0.65), rgba(178, 75, 243, 0.55), rgba(178, 75, 243, 0.45), #8c00ff00)';
+      }
+      else if(clickedTabBGColor == "rgb(215, 161, 249)"){ //green
+      document.getElementsByClassName('about')[0].style.backgroundImage = 'linear-gradient(to bottom, rgba(215, 161, 249, 0.95), rgba(215, 161, 249, 0.90), rgba(215, 161, 249, 0.85), rgba(215, 161, 249, 0.80), rgba(215, 161, 249, 0.75), rgba(215, 161, 249, 0.70), #8c00ff00)';
+      document.getElementById('info').style.color = "#fff";
+      }
+      else if(clickedTabBGColor == "rgb(197, 118, 246)"){ //Yellow
+      document.getElementsByClassName('about')[0].style.backgroundImage = 'linear-gradient(to bottom, rgba(197, 118, 246, 0.95), rgba(197, 118, 246, 0.90), rgba(197, 118, 246, 0.80), rgba(197, 118, 246, 0.70), rgba(197, 118, 246, 0.60), rgba(197, 118, 246, 0.50), #8c00ff00)';
+      document.getElementById('info').style.color = "#fff";
+      }
+
+    });
+    });
+
+
+    function waitBeforeNavigate(ev) {
+      ev.preventDefault();                    // prevent default anchor behavior
+      const goTo = this.getAttribute("href"); // store anchor href
+      setTimeout(function(){
+      window.location = goTo;
+      }, 900);                               // time in ms
+      }; 
+      document.querySelectorAll(".waitBeforeNavigate")
+      .forEach(EL => EL.addEventListener("click", waitBeforeNavigate));
+
+    function waitBeforeNavigateQuick(ev) {
+      ev.preventDefault();                    // prevent default anchor behavior
+      const goTo = this.getAttribute("href"); // store anchor href
+      setTimeout(function(){
+      window.location = goTo;
+      }, 400);                               // time in ms
+      }; 
+      document.querySelectorAll(".waitBeforeNavigateQuick")
+      .forEach(EL => EL.addEventListener("click", waitBeforeNavigateQuick));
+
+  </script>
+
+    
+
+<footer>
+  
+  Thanks for stopping by!
+  <br>
+  If you like this site, feel free to check the <a href="index.html" class="repBtn">repository</a> to see how it was built
+  <br>
+  Period.
+  <br>
+   
+</footer> 
