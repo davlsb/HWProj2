@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "express-rate-limit": "^6.4.0",
+    "helmet": "^5.0.2",
+    "sqlite3": "^5.0.8"
+  },
+  "name": "nirvopoly",
+  "version": "1.0.0",
+  "description": "a site for our team",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "testing"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davlsb/HWProj2.git"
+  },
+  "keywords": [
+    "nirvopoly"
+  ],
+  "author": "nirvopoly (dee, nirvana, jekari, ish, thamesh)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davlsb/HWProj2/issues"
+  },
+  "homepage": "https://github.com/davlsb/HWProj2#readme"
+}
