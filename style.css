@@ -69,20 +69,9 @@ clear: both;
 .logo {
 float: left;
 padding-left: 50px;
+margin-top: 30px;
 }
 
-.nav {
-  padding-right: 50px;
-  float: right;
-    margin-bottom: 25px;
-    
-}
-
-.nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 
 .nav li {
   display: inline-block;
@@ -92,18 +81,18 @@ padding-left: 50px;
   position: relative;
 }
 
-.nav a {
+nav a {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
 }
 
-.nav a:hover {
+nav a:hover {
   color: #ffffff;
 }
 
-.nav a::before {
+nav a::before {
   content: '';
   display: block;
   height: 5px;
@@ -114,8 +103,94 @@ padding-left: 50px;
   transition: all ease-in-out 250ms;
 }
 
-.nav a:hover::before {
+nav a:hover::before {
   width: 100%;
+}
+
+
+nav {
+    padding: 20px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: width 0.6s linear;
+    padding-right: 50px;
+    float: right;
+}
+
+nav.active {
+    width: 350px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    transition: width 0.6s linear;
+}
+
+nav.active ul{
+    width: 100%;
+}
+
+nav ul li{
+    transform: rotateY(0deg);
+    opacity: 0;
+    transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+nav.active ul li {
+    opacity: 1;
+    transform: rotateY(360deg);
+}
+
+nav ul a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.icon {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+}
+
+.icon:focus{
+    outline: 0;
+}
+
+.icon .line {
+    background-color: white;
+    height: 2px;
+    top: 10px;
+    left: 10px;
+    transition: transform 0.6s linear;
+    margin: 5px;
+
+}
+
+.icon .line2 {
+    top: 5px;
+    bottom: 10px;
+}
+
+nav.active .icon .line1 {
+    transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.active .icon .line2 {
+    transform: rotate(765deg) translateY(-5.5px);
 }
 
 .about{
@@ -328,7 +403,7 @@ margin-top: 10em;
 .btn:hover {
   color: #ffffff;
   transition: all ease-in-out 300ms;
-  box-shadow:2px 2px 20px rgba(145, 92, 182, 0.76);
+  box-shadow:2px 2px 20px rgba(92, 116, 182, 0.6);
 }
 
 
@@ -336,7 +411,7 @@ margin-top: 10em;
 @media(max-width:600px) {
   .card {
     display: block;
-	  box-shadow:1px 1px -10px rgba(145, 92, 182, .4);
+	  box-shadow:1px 1px -10px rgba(92, 116, 182, 0.4);
   }
 }
 
