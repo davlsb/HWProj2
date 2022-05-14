@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
+
+
+
+main{
+    margin: 10em;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 1em;
+    grid-auto-rows: minmax(100px, auto);
+    transition: opacity .2s, visibility .2s;
+    transition-duration: 0.4s;
+  }
+  .one {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .two {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .three {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .four {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .five {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .six {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .seven {
+    grid-column: 3/5;
+    grid-row: 2;
+  }
+
+
+.clothImage img{
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 1em;
+    margin-bottom: -3.4em;
+}
+
+.clothText {
+    opacity: 100%;
+    color:white;
+    position:relative;
+    padding-left: 1em;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    padding-bottom: 0;
+    background-color: #4554da;
+    margin-top: -0.6em;
+    text-decoration: none;
+}
