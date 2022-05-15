@@ -140,14 +140,14 @@ nav.active ul{
 nav ul li{
     transform: rotateY(0deg);
     opacity: 0;
-    visibility: hidden;
-    transition: transform 0.6s linear, opacity 0.6s linear, visibility 0.6s linear;
+    position:absolute;
+    transition: transform 0.6s linear, opacity 0.6s linear, position 0.6s linear;
 }
 
 nav.active ul li {
     opacity: 1;
     transform: rotateY(360deg);
-    visibility: visible;
+    position:static;
 }
 
 nav ul a {
