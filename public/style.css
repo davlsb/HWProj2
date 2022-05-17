@@ -7,30 +7,32 @@
 
 html {
   scroll-behavior: smooth;
- }
+}
 
 
- body {
+body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
   background: #fafafa;
-  -ms-overflow-style: none;  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* IE and Edge */
   scrollbar-width: none;
 }
 
-p{
+p {
   font-family: 'Outfit', sans-serif;
   font-weight: 300;
 }
 
 
 @font-face {
-  src:local('Pacifico Regular'), url("https://fonts.googleapis.com/css?family=Alata&display=swap");
+  src: local('Pacifico Regular'), url("https://fonts.googleapis.com/css?family=Alata&display=swap");
   font-family: 'Outfit', sans-serif;
   font-weight: 400;
-  font-display: fallback; /* Define how the browser behaves during download */
+  font-display: fallback;
+  /* Define how the browser behaves during download */
   font-display: swap;
 }
 
@@ -41,35 +43,37 @@ p{
 
 
 .top {
-width: 100%;
-z-index: 9999;
+  width: 100%;
+  z-index: 9999;
   background: #4554da81;
   font-family: 'Work Sans', sans-serif;
-  margin:0;
+  margin: 0;
 }
 
 header {
-    z-index: 9999;
-    -webkit-backdrop-filter: blur(5px);
-    backdrop-filter: blur(5px); 
-    position:fixed;
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    background: #4554da;
-    color: #ffffff;
-    font-weight: 900;
-  }
-  
+  z-index: 9999;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  top: 0;
+  /* Position the navbar at the top of the page */
+  width: 100%;
+  /* Full width */
+  background: #4554da;
+  color: #ffffff;
+  font-weight: 900;
+}
+
 header::after {
-content: '';
-display: table;
-clear: both;
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .logo {
-float: left;
-padding-left: 50px;
-margin-top: 30px;
+  float: left;
+  padding-left: 50px;
+  margin-top: 30px;
 }
 
 
@@ -109,118 +113,118 @@ nav a:hover::before {
 
 
 nav {
-    padding: 20px;
-    width: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    transition: width 0.6s linear;
-    padding-right: 50px;
-    float: right;
+  padding: 20px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  transition: width 0.6s linear;
+  padding-right: 50px;
+  float: right;
 }
 
 nav.active {
-    width: 350px;
+  width: 350px;
 }
 
 nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    width: 0;
-    transition: width 0.6s linear;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  transition: width 0.6s linear;
 }
 
-nav.active ul{
-    width: 100%;
+nav.active ul {
+  width: 100%;
 }
 
-nav ul li{
-    transform: rotateY(0deg);
-    opacity: 0;
-    position:absolute;
-    transition: transform 0.6s linear, opacity 0.6s linear, position 0.6s linear;
+nav ul li {
+  transform: rotateY(0deg);
+  opacity: 0;
+  position: absolute;
+  transition: transform 0.6s linear, opacity 0.6s linear, position 0.6s linear;
 }
 
 nav.active ul li {
-    opacity: 1;
-    transform: rotateY(360deg);
-    position:static;
+  opacity: 1;
+  transform: rotateY(360deg);
+  position: static;
 }
 
 nav ul a {
-    position: relative;
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
 }
 
 .icon {
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-    padding: 0;
-    position: relative;
-    height: 30px;
-    width: 30px;
-    margin-top: 15px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+  margin-top: 15px;
 }
 
-.icon:focus{
-    outline: 0;
+.icon:focus {
+  outline: 0;
 }
 
 .icon .line {
-    background-color: white;
-    height: 3px;
-    top: 10px;
-    left: 10px;
-    transition: transform 0.6s linear;
-    margin: 5px;
+  background-color: white;
+  height: 3px;
+  top: 10px;
+  left: 10px;
+  transition: transform 0.6s linear;
+  margin: 5px;
 
 }
 
 .icon .line2 {
-    top: 5px;
-    bottom: 10px;
+  top: 5px;
+  bottom: 10px;
 }
 
 nav.active .icon .line1 {
-    transform: rotate(-765deg) translateY(5.5px);
+  transform: rotate(-765deg) translateY(5.5px);
 }
 
 nav.active .icon .line2 {
-    transform: rotate(765deg) translateY(-5.5px);
+  transform: rotate(765deg) translateY(-5.5px);
 }
 
-.about{
+.about {
   background-image: linear-gradient(#4554da, #5e6ad4, #707ad4, #8c00ff00);
   height: 63em;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
 
-.about img{
-position: relative;
-margin-top: 20em;
+.about img {
+  position: relative;
+  margin-top: 20em;
 
 }
 
 #aboutme {
-    color: #ffffff;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 700;
-    font-size: 2.3em;
-    padding-top: 150px;
-    padding-left: 2em;
-    margin-left: 3em;
-    display: inline-block;
+  color: #ffffff;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 2.3em;
+  padding-top: 150px;
+  padding-left: 2em;
+  margin-left: 3em;
+  display: inline-block;
 
 }
 
-.containerAbout{
+.containerAbout {
 
   display: flex;
   margin: auto;
@@ -228,8 +232,8 @@ margin-top: 20em;
 }
 
 
-#info{
-  color:#e2e2e2;
+#info {
+  color: #e2e2e2;
   font-family: 'Alata', sans-serif;
   padding-left: 3.7em;
   padding-bottom: 50px;
@@ -238,23 +242,27 @@ margin-top: 20em;
   width: 55%;
 }
 
-#info p{
+#info p {
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
 }
 
-.firstWave{
+.firstWave {
   background: #b19cd9;
 }
 
 
-.firstWave > svg {
+.firstWave>svg {
   display: block;
 }
 
-#secondWave{ margin-bottom: -2rem; }
+#secondWave {
+  margin-bottom: -2rem;
+}
 
-#projectsMark{ margin: 0.2em;}
+#projectsMark {
+  margin: 0.2em;
+}
 
 .cardEx {
   background: #ffffff;
@@ -274,12 +282,12 @@ margin-top: 20em;
   font-weight: 500;
 }
 
-.cardEx > div {
+.cardEx>div {
   padding: 2rem;
 }
 
 #newTitle {
-  color:#222;
+  color: #222;
   font-family: 'Alata', sans-serif;
   font-size: 2em;
   padding-top: 50px;
@@ -289,7 +297,7 @@ margin-top: 20em;
 
 #skillType {
   display: inline-flex;
-  color:#222;
+  color: #222;
   font-family: 'Alata', sans-serif;
   font-size: 1.2em;
   padding-right: 10px;
@@ -321,8 +329,12 @@ margin-top: 20em;
 
 }
 
+#skillChips:hover {
+  background-color: #9f9f9f;
+}
+
 #projects {
-  color:#222;
+  color: #222;
   font-family: 'Alata', sans-serif;
   font-size: 2em;
   padding-top: 50px;
@@ -348,17 +360,17 @@ margin-top: 20em;
 
 .card img {
   height: 100%;
-  width:100%;
+  width: 100%;
   object-fit: cover;
 }
 
 .card picture {
   height: 100%;
-  width:100%;
+  width: 100%;
   object-fit: cover;
 }
 
-.card > div {
+.card>div {
   padding: 2rem;
 }
 
@@ -366,26 +378,26 @@ margin-top: 20em;
   order: 2;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-		  box-shadow:1px 1px -50px rgba(145, 92, 182, .4);
+  box-shadow: 1px 1px -50px rgba(145, 92, 182, .4);
 }
 
 .card:nth-child(even) picture {
   order: 2;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-		  box-shadow:1px 1px -50px rgba(145, 92, 182, .4);
+  box-shadow: 1px 1px -50px rgba(145, 92, 182, .4);
 }
 
 .card:nth-child(odd) img {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-		  box-shadow:1px 1px -50px rgba(145, 92, 182, .4);
+  box-shadow: 1px 1px -50px rgba(145, 92, 182, .4);
 }
 
 .card:nth-child(odd) picture {
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
-		  box-shadow:1px 1px -50px rgba(145, 92, 182, .4);
+  box-shadow: 1px 1px -50px rgba(145, 92, 182, .4);
 }
 
 
@@ -402,14 +414,14 @@ margin-top: 20em;
 
 }
 
-.repBtn{
-  color:white;
+.repBtn {
+  color: white;
   font-style: normal;
   text-decoration: none;
   background-color: #00000000;
 }
 
-.repBtn:hover{
+.repBtn:hover {
   transition: all 0.2s ease-in-out;
   text-shadow: 0px 0px 10px rgb(255 255 255);
 }
@@ -418,7 +430,7 @@ margin-top: 20em;
 .btn:hover {
   color: #ffffff;
   transition: all ease-in-out 300ms;
-  box-shadow:2px 2px 20px rgba(92, 116, 182, 0.6);
+  box-shadow: 2px 2px 20px rgba(92, 116, 182, 0.6);
 }
 
 
@@ -426,94 +438,99 @@ margin-top: 20em;
 @media(max-width:600px) {
   .card {
     display: block;
-	  box-shadow:1px 1px -10px rgba(92, 116, 182, 0.4);
+    box-shadow: 1px 1px -10px rgba(92, 116, 182, 0.4);
   }
 }
 
-.container{
+.container {
   max-width: 1100px;
   margin: auto;
   overflow: auto;
   padding: 0 2rem;
   padding-left: 20px;
-	padding-top: -50px;
+  padding-top: -50px;
   overflow-x: hidden;
 }
 
 
-#contact{
-  color:#222;
+#contact {
+  color: #222;
   font-family: 'Alata', sans-serif;
   padding-top: 50px;
 }
 
-#contactMe{
-    width: 500px;
-    margin: 2em;
-    padding: 2em;
-    box-shadow: 0.5em 0.5em 1em #4d4d4d27;
-  }
-  
+#contactMe {
+  width: 500px;
+  margin: 2em;
+  padding: 2em;
+  box-shadow: 0.5em 0.5em 1em #4d4d4d27;
+}
 
-#contact > .contactTitle {
+
+#contact>.contactTitle {
   font-size: 3em;
   text-align: center;
   padding-bottom: 0.5em;
   padding: 1em;
 }
 
-#contactText{
+#contactText {
   font-size: 1.3em;
 }
 
 
-.containerContact{
+.containerContact {
   max-width: 100%;
   margin-bottom: 2em;
   overflow-y: hidden;
 }
 
 .cardAbout {
-  color:#000000;
+  color: #000000;
   font-size: 2em;
   padding-top: 5px;
   overflow: hidden;
   grid-gap: 2rem;
   background: #ffffff;
   margin-bottom: 2rem;
-  font-size: 1.3rem; 
+  font-size: 1.3rem;
   font-family: 'Alata', sans-serif;
   border-radius: 25px;
   box-shadow: 0.5em 0.5em 1em #4d4d4d27;
 }
+
 .cardAbout h3 {
   margin-bottom: 2rem;
   overflow: hidden;
 }
-.cardAbout > div {
+
+.cardAbout>div {
   padding: 2rem;
   overflow: hidden;
 }
 
 
 footer {
-  width: 100%; /* self explanatory */ /*The element is positioned relative to its first positioned (not static) ancestor element*/
-  bottom: 0PX; /*property affects the vertical position of a positioned element*/
+  width: 100%;
+  /* self explanatory */
+  /*The element is positioned relative to its first positioned (not static) ancestor element*/
+  bottom: 0PX;
+  /*property affects the vertical position of a positioned element*/
   background-color: #2933c2;
   font-family: 'Outfit', sans-serif;
   height: 4em;
   text-align: center;
   padding-top: 2em;
   padding-bottom: 2em;
-  color:white;
+  color: white;
   margin-top: 5em;
 }
 
 
-.tab-container{
+.tab-container {
   background: #fff;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  display:flex;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
   justify-content: space-between;
   padding: 0.3em;
   padding-top: 10px;
@@ -522,10 +539,10 @@ footer {
   position: fixed;
   bottom: 0;
   height: 55px;
-  overflow-x: hidden; 
+  overflow-x: hidden;
 }
 
-.tab{
+.tab {
   background: white;
   color: rgba(0, 0, 0, 0.75);
   border-radius: 50px;
@@ -542,47 +559,47 @@ footer {
   text-decoration: none;
   align-items: center;
   justify-content: center;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   margin-right: 0.5em;
 }
 
-.tab i{
+.tab i {
   font-size: 1.2em;
 }
 
-.tab p{
+.tab p {
   font-weight: bold;
-  overflow:hidden;
+  overflow: hidden;
   max-width: 0;
 }
 
-.tab.active p{
+.tab.active p {
   margin-left: 10px;
   max-width: 200px;
   transition: max-width 0.4s linear;
 }
 
-.tab.active.purple{
+.tab.active.purple {
   background: rgba(91, 55, 183, 0.2);
-  color: rgb(147,112,219)
+  color: rgb(147, 112, 219)
 }
 
-.tab.active.pink{
+.tab.active.pink {
   background: rgba(178, 74, 242, 0.2);
   color: #b24bf3
 }
 
-.tab.active.green{
+.tab.active.green {
   background: rgba(215, 161, 249, 0.2);
   color: #D7A1F9;
 }
 
-.tab.active.yellow{
+.tab.active.yellow {
   background: rgba(197, 118, 246, 0.2);
   color: #C576F6;
 }
 
-.tab-container{ 
+.tab-container {
   display: none;
 }
 
@@ -600,11 +617,13 @@ footer {
 }
 
 /* Full-width input fields */
-.form-container input[type=text], .form-container input[type=email], .form-container input[type=password] {
- font-size: 1rem;
+.form-container input[type=text],
+.form-container input[type=email],
+.form-container input[type=password] {
+  font-size: 1rem;
   outline: none;
   border: 1px solid gray;
-  border-radius: 5px;  
+  border-radius: 5px;
   padding: 1rem 0.7rem;
   color: gray;
   width: -webkit-fill-available;
@@ -613,13 +632,14 @@ footer {
 }
 
 /* When the inputs get focus, do something */
-.form-container input:focus + label {
+.form-container input:focus+label {
   color: #4554da;
   top: 0;
   transform: translateY(-50%) scale(.9);
   font-family: 'Alata', sans-serif;
 }
-.form-container input:not(:placeholder-shown) + label {
+
+.form-container input:not(:placeholder-shown)+label {
   top: 0;
   transform: translateY(-50%) scale(.9);
   font-family: 'Alata', sans-serif;
@@ -629,11 +649,11 @@ footer {
 
 
 
-.form-container textarea{
-font-size: 1rem;
+.form-container textarea {
+  font-size: 1rem;
   outline: none;
   border: 1px solid gray;
-  border-radius: 5px;  
+  border-radius: 5px;
   padding: 1rem 0.7rem;
   color: gray;
   transition: 0.1s ease-out;
@@ -645,18 +665,18 @@ font-size: 1rem;
 }
 
 /* When the inputs get focus, do something */
-.form-container textarea:focus + label {
+.form-container textarea:focus+label {
   color: #4554da;
   top: 0;
   transform: translateY(-50%) scale(.9);
 }
 
-.form-container textarea:placeholder-shown + label {
+.form-container textarea:placeholder-shown+label {
   top: 50%;
   transform: translateY(-50%) scale(.9);
 }
 
-.form-container textarea:not(:placeholder-shown) + label {
+.form-container textarea:not(:placeholder-shown)+label {
   top: 0%;
   transform: translateY(-50%) scale(.9);
 }
@@ -672,24 +692,25 @@ font-size: 1rem;
   border: none;
   cursor: pointer;
   width: 100%;
-  margin-bottom:-20px;
+  margin-bottom: -20px;
   opacity: 0.8;
 }
 
 /* Add a gray background color to the cancel button */
 .form-container .cancel {
- border-radius: 100px;
+  border-radius: 100px;
   background-color: gray;
 }
 
 .form-container .cancel:hover {
   border-radius: 100px;
   background-color: gray;
-  box-shadow:2px 2px 20px rgba(189, 195, 199, 0.80);
+  box-shadow: 2px 2px 20px rgba(189, 195, 199, 0.80);
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover,
+.open-button:hover {
   opacity: 1;
 }
 
@@ -716,26 +737,26 @@ label {
 
 
 
-.material-textfield-message  {
+.material-textfield-message {
   position: relative;
   padding: 0.2em;
   margin-bottom: 1em;
 }
 
-.material-textfield-message > input {
+.material-textfield-message>input {
   width: 375px;
- height: 25px;
+  height: 25px;
 }
 
 .box {
-    background-color: #eeeeee45;
-    display: none;
-    border-radius: 5px;
-    font-family: sans-serif;
-    line-height: unset;
-    backdrop-filter: blur(10px);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  background-color: #eeeeee45;
+  display: none;
+  border-radius: 5px;
+  font-family: sans-serif;
+  line-height: unset;
+  backdrop-filter: blur(10px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
