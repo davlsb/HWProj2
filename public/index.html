@@ -150,60 +150,25 @@
 
 
   <script>
-    const tabs = document.querySelectorAll('.tab');
-
-    tabs.forEach(clickedTab => {
-      clickedTab.addEventListener('click', ()=>{
-        tabs.forEach(tab => {
-        tab.classList.remove('active');
-      });
-
-      clickedTab.classList.add('active');
-      const clickedTabBGColor = getComputedStyle(clickedTab).getPropertyValue('color');
-      console.log(clickedTabBGColor);
-      document.getElementById('btnGit1').style.background = clickedTabBGColor;
-      document.getElementById('btnGit2').style.background = clickedTabBGColor;
-      document.getElementById('btnGit3').style.background = clickedTabBGColor;
-      document.getElementById('submitBtn').style.background = clickedTabBGColor;
-     
-      if(clickedTabBGColor == "rgb(147, 112, 219)"){ //Purple
-      document.getElementsByClassName('about')[0].style.backgroundImage = 'linear-gradient(to bottom,#8c00ff, #8c00ff, #8c00ffd7, #8c00ffd7, #7f01e6bd, #8c00ffb7, #8c00ff00)';
-      }
-      else if(clickedTabBGColor == "rgb(178, 75, 243)"){ //Pink
-      document.getElementsByClassName('about')[0].style.backgroundImage = 'linear-gradient(to bottom, rgba(178, 75, 243, 0.95), rgba(178, 75, 243, 0.85), rgba(178, 75, 243, 0.75), rgba(178, 75, 243, 0.65), rgba(178, 75, 243, 0.55), rgba(178, 75, 243, 0.45), #8c00ff00)';
-      }
-      else if(clickedTabBGColor == "rgb(215, 161, 249)"){ //green
-      document.getElementsByClassName('about')[0].style.backgroundImage = 'linear-gradient(to bottom, rgba(215, 161, 249, 0.95), rgba(215, 161, 249, 0.90), rgba(215, 161, 249, 0.85), rgba(215, 161, 249, 0.80), rgba(215, 161, 249, 0.75), rgba(215, 161, 249, 0.70), #8c00ff00)';
-      document.getElementById('info').style.color = "#fff";
-      }
-      else if(clickedTabBGColor == "rgb(197, 118, 246)"){ //Yellow
-      document.getElementsByClassName('about')[0].style.backgroundImage = 'linear-gradient(to bottom, rgba(197, 118, 246, 0.95), rgba(197, 118, 246, 0.90), rgba(197, 118, 246, 0.80), rgba(197, 118, 246, 0.70), rgba(197, 118, 246, 0.60), rgba(197, 118, 246, 0.50), #8c00ff00)';
-      document.getElementById('info').style.color = "#fff";
-      }
-
-    });
-    });
-
-
-    function waitBeforeNavigate(ev) {
-      ev.preventDefault();                    // prevent default anchor behavior
-      const goTo = this.getAttribute("href"); // store anchor href
-      setTimeout(function(){
-      window.location = goTo;
-      }, 900);                               // time in ms
-      }; 
-      document.querySelectorAll(".waitBeforeNavigate")
-      .forEach(EL => EL.addEventListener("click", waitBeforeNavigate));
-
-    function waitBeforeNavigateQuick(ev) {
-      ev.preventDefault();                    // prevent default anchor behavior
-      const goTo = this.getAttribute("href"); // store anchor href
-      setTimeout(function(){
-      window.location = goTo;
-      }, 400);                               // time in ms
-      }; 
-      document.querySelectorAll(".waitBeforeNavigateQuick")
-      .forEach(EL => EL.addEventListener("click", waitBeforeNavigateQuick));
+      let i = 0;
+      document.getElementById('aboutpics').onclick=function(){
+        if(i == 0){
+          document.getElementsByClassName('about')[0].style.backgroundImage = 'linear-gradient(to bottom,#8c00ff, #8c00ff, #8c00ffd7, #8c00ffd7, #7f01e6bd, #8c00ffb7, #8c00ff00)';
+          document.getElementById('myHeader').style.background = "#8c00ff";
+          i++;
+        } else if(i== 1){
+          document.getElementsByClassName('about')[0].style.backgroundImage = 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)';
+          document.getElementById('myHeader').style.background = "transparent";
+          i++;
+        } else if(i== 2){
+          document.getElementsByClassName('about')[0].style.backgroundImage = 'radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%)';
+          i++;
+        } else if(i==3){
+          document.getElementsByClassName('about')[0].style.backgroundImage = 'linear-gradient(#4554da, #5e6ad4, #707ad4, #8c00ff00)';
+          document.getElementById('myHeader').style.background = "#4554da";
+          i = 0;
+        }
+      };
 
   </script>
 
