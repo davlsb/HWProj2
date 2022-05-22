@@ -247,18 +247,6 @@ nav.active .icon .line2 {
   font-weight: 500;
 }
 
-.firstWave {
-  background: #b19cd9;
-}
-
-
-.firstWave>svg {
-  display: block;
-}
-
-#secondWave {
-  margin-bottom: -2rem;
-}
 
 #projectsMark {
   margin: 0.2em;
