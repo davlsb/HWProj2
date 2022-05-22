@@ -3,7 +3,7 @@ const nav = document.getElementById('nav');
 
 nav.classList.toggle('active');
 
-
+//Script for FAQ element.
 toggle.addEventListener('click', () => {
     nav.classList.toggle('active')
 })
@@ -16,7 +16,7 @@ faqtoggles.forEach(toggle => {
     })
 })
 
-
+//Script for button element and animation.
 const formButton = document.getElementById('submitBtn');
 formButton.addEventListener('click', function (e) {
     const x = e.clientX
@@ -38,6 +38,7 @@ formButton.addEventListener('click', function (e) {
     setTimeout(() => circle.remove(), 500)
 })
 
+//Script for toast animation/message.
 const toasts = document.getElementById('toasts')
 
 const messages = [
