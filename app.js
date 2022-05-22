@@ -17,22 +17,23 @@ const limiter = rateLimit({
 
 var db = new sqlite3.Database('./database/form.db');
 
-
+//Instance of express.js and database directory.
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname,'./public')));
 app.use(helmet());
 app.use(limiter);
 
+//Creates table, name, email, message
 db.run('CREATE TABLE IF NOT EXISTS responses(name TEXT, email TEXT, message TEXT)');
 
-
+//Get request
 app.get('/', function(req,res){
   res.sendfile('./index.html');
   });
 
 
-
-// Insert
+//Post request (form)
+//Insert
 app.post('/add', function(req,res){
     db.serialize(()=>{
       db.run('INSERT INTO responses(name,email,message) VALUES(?,?,?)', [req.body.name, req.body.email, req.body.message], function(err) {
@@ -45,7 +46,8 @@ app.post('/add', function(req,res){
   });
   });
 
-  
-server.listen(3000,function(){ 
+//Server Listen on port 3000
+//The server application will listen to all requests made by the browser.
+server.listen(3000,function(){
     console.log("Server listening on port: 3000")
 });
