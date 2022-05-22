@@ -4,6 +4,7 @@ const nav = document.getElementById('nav');
 nav.classList.toggle('active');
 
 //Script for FAQ element.
+//Udemy Project #12
 toggle.addEventListener('click', () => {
     nav.classList.toggle('active')
 })
@@ -16,7 +17,8 @@ faqtoggles.forEach(toggle => {
     })
 })
 
-//Script for button element and animation.
+//Script for ripple button element and animation.
+//Udemy Project #20
 const formButton = document.getElementById('submitBtn');
 formButton.addEventListener('click', function (e) {
     const x = e.clientX
@@ -39,6 +41,7 @@ formButton.addEventListener('click', function (e) {
 })
 
 //Script for toast animation/message.
+//Udemy Project #27
 const toasts = document.getElementById('toasts')
 
 const messages = [
