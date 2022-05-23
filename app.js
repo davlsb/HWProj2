@@ -28,7 +28,7 @@ db.run('CREATE TABLE IF NOT EXISTS responses(name TEXT, email TEXT, message TEXT
 
 //Get request
 app.get('/', function(req,res){
-  res.sendfile('./index.html');
+  res.sendFile('./index.html');
   });
 
 //if site URL doesn't exist, display error code 404, with the message page does not exist
