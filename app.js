@@ -31,6 +31,11 @@ app.get('/', function(req,res){
   res.sendfile('./index.html');
   });
 
+//if site URL doesn't exist, display error code 404, with the message page does not exist
+app.get('*', function(req, res){
+  res.status(404).send('Error 404: Page Does Not Exist');
+});
+
 
 //Post request (form)
 //Insert
@@ -45,6 +50,7 @@ app.post('/add', function(req,res){
       });
   });
   });
+
 
 //Server Listen on port 3000
 //The server application will listen to all requests made by the browser.
